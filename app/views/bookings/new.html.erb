@@ -1,0 +1,8 @@
+<h1>hhh</h1>
+<%= simple_form_for [@user.current, @booking] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :car, Car.find(params[:id]) %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.button :submit %>
+<% end %>
