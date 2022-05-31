@@ -1,1 +1,9 @@
-<h1>SHow page</h1>
+<h1><%= @car.make %></h1>
+
+<p><%= @car.model %></p>
+<p><%= @car.price %></p>
+<p><%= @car.location %></p>
+<div class="cards">
+    <%= content_tag(:div, class: "card-category", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#{@car.photo_url}") do
+    end %>
+ </div>
