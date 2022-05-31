@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :cars do
     resources :bookings, only: [:new, :create, :show]
   end
-  resources :bookings, only: [:destroy, :idex]
+  resources :bookings, only: [:destroy, :index]
 end
