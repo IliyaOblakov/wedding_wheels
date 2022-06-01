@@ -1,9 +1,25 @@
-<h1><%= @car.make %></h1>
+<hr>
+<div class="container">
+<div class="flex-row text-center" style="background-color: white; width: 49%">
+  <ul id="lists">
+    <li class="list"> <strong>Make:</strong> <%= @car.make %></em></li>
+    <li class="list"> <strong> Model: </strong> <%= @car.model %></li>
+    <li class="list"><strong>Price:</strong> <%= @car.price %></li>
+    <li class="list"><strong>Location</strong> <%= @car.location %></li>
+  </ul>
+  </div>
 
-<p><%= @car.model %></p>
-<p><%= @car.price %></p>
-<p><%= @car.location %></p>
-<div class="cards">
-    <%= content_tag(:div, class: "card-category", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(#{@car.photo_url}") do
-    end %>
- </div>
+  <div class="row">
+  <div class="col">
+     <%=image_tag(@car.photo_url, class: "img-fluid") %>
+  </div>
+  <div class="col">
+    <h3>Book our <%= @car.make %></h3>
+    <%= simple_form_for [@car, @booking] do |f| %>
+      <%= f.input :comment %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
