@@ -1,98 +1,79 @@
 body {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   color: rgb(26, 22, 22);
   font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
 }
-
-.space {
-  height: 100px;
-  width: 100%;
-  background-color: #FFF;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
   background-color: #333;
   bottom: 0;
-  left: 0;
+  padding-left: 40px;
   right: 0;
 }
-
 .footer-top {
   display: flex;
   width: 75%;
   margin: auto;
+  padding: 10px;
   justify-content: space-around;
 }
-
 .footer-bottom {
   display: flex;
   flex-direction: column;
 }
-
 /*links*/
-
 .links-section {
   display: flex;
   width: 50%;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-
 .links-header {
   font-weight: bold;
   font-size: 14px;
 }
-
 .links-list {
   display: flex;
   flex-direction: column;
 }
-
 #company-links,
 #discover-links {
   margin-right: 20px;
 }
-
 #mobile-links {
   display: none;
   width: 50%;
   justify-content: space-between;
   margin: 20px auto;
 }
-
 .link-item {
   color: #FFF;
   font-size: .8em;
   text-decoration: none;
 }
-
 .link-item:hover {
   text-decoration: none;
   color: rgba(255, 255, 255, .5);
 }
-
 .footer-bar {
   margin: auto;
   border-bottom: 1px solid #777;
   width: 80%;
 }
-
 .join {
   text-align: center;
   font-size: 14px;
 }
-
 .socialIcons-section {
   display: flex;
   justify-content: space-between;
   width: 50%;
   margin: auto;
 }
-
 .circle {
   position: relative;
   border: 1px solid #666;
@@ -100,7 +81,6 @@ body {
   height: 36px;
   border-radius: 50px;
 }
-
 .icon {
   position: absolute;
   left: 50%;
@@ -109,17 +89,14 @@ body {
   font-size: 1em;
   color: #FFF;
 }
-
 .icon:hover {
-  color: #cdcdcd;
+  color: #CDCDCD;
 }
-
 .copywright {
   text-align: center;
   font-size: .8em;
   color: #666;
 }
-
 @media only screen and (max-width: 745px) {
   .links-section,
   .join,
@@ -138,7 +115,6 @@ body {
     width: 80%;
   }
 }
-
 @media only screen and (max-width: 415px) {
   .socialIcons-section {
     width: 80%;
