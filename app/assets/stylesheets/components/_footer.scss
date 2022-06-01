@@ -9,10 +9,11 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: #333;
+  background-color: rgba(115, 163, 236, 0.8);
   bottom: 0;
   padding-left: 40px;
   right: 0;
+  color: white;
 }
 .footer-top {
   display: flex;
