@@ -17,9 +17,9 @@
     <h3>Book our <%= @car.make %></h3>
     <%= simple_form_for [@car, @booking] do |f| %>
       <%= f.input :comment %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
-      <%= f.button :submit %>
+      <%= f.input :start_date, as: :date, html5: true %>
+      <%= f.input :end_date, as: :date, html5: true %>
+      <%= f.button :submit, class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
