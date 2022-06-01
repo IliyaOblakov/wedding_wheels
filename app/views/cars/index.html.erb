@@ -1,1 +1,9 @@
-<h1>Hello from cars index</h1>
+<div class="container">
+  <h1>These are all the cars we have : </h1>
+  <% @cars.each do | car | %>
+    <p><%= link_to "#{car.make} #{car.model}", car_path(car), class: "btn btn-primary"%></p> <%= link_to "Book our #{car.make} #{car.model}", new_car_booking_path(car) %>
+    <%= image_tag(car.photo_url, size: "600x400") %>
+    <hr>
+    <br>
+  <% end %>
+</div>
