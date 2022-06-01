@@ -1,0 +1,13 @@
+<div class="container mt-3">
+<h1><%= "Hi #{current_user.first_name}" %></h1>
+<hr>
+<h2>Add a car to your listings</h2>
+<%= simple_form_for(@car) do |f| %>
+  <%= f.input :make %>
+  <%= f.input :model %>
+  <%= f.input :photo_url %>
+  <%= f.input :price %>
+  <%= f.input :location %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
+</div>

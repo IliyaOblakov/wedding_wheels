@@ -1,9 +1,17 @@
 <div class="container">
-  <h1>These are all the cars we have : </h1>
-  <% @cars.each do | car | %>
-    <p><%= link_to "#{car.make} #{car.model}", car_path(car), class: "btn btn-primary"%></p>
-    <%= image_tag(car.photo_url, size: "600x400") %>
-    <hr>
-    <br>
-  <% end %>
+  <h1>Cars For Hire</h1>
+  <div class="cards">
+    <% @cars.each do | car | %>
+      <div class="card-trip">
+        <%= image_tag(car.photo_url, size: "600x400") %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= link_to "#{car.make} #{car.model}", car_path(car)%></h2>
+            <p>Located in <%= car.location %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= car.price %></h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
