@@ -2,6 +2,11 @@
   justify-content: space-between;
   background: white;
 }
+  .navbar-brand {
+    font-family: $accent-font;
+    font-size: 140px;
+
+}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -9,4 +14,10 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+h1 {
+  color: rgb(106, 8, 24);
+  font-size: 80px;
+  font-family: 'Satisfy', "cursive";
 }
