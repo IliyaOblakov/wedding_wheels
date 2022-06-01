@@ -1,4 +1,5 @@
 body {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   color: rgb(26, 22, 22);
@@ -6,18 +7,13 @@ body {
   margin: 0;
 }
 
-.space {
-  height: 100px;
-  width: 100%;
-  background-color: #FFF;
-}
 
 .footer {
   display: flex;
   flex-direction: column;
   background-color: #333;
   bottom: 0;
-  left: 0;
+  padding-left: 40px;
   right: 0;
 }
 
@@ -25,6 +21,7 @@ body {
   display: flex;
   width: 75%;
   margin: auto;
+  padding: 10px;
   justify-content: space-around;
 }
 
