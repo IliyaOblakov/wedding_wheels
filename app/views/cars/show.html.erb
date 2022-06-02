@@ -1,26 +1,49 @@
-<hr>
+<% if current_user.present? && current_user.id == @car.user_id %>
+  <hr>
 <div class="container">
-  <div class="flex-row text-center" style="background-color: white; width: 49%">
-    <ul id="lists">
-      <li class="list"> <strong>Make:</strong> <%= @car.make %></em></li>
-      <li class="list"> <strong> Model: </strong> <%= @car.model %></li>
-      <li class="list"><strong>Price:</strong> <%= @car.price %></li>
-      <li class="list"><strong>Location</strong> <%= @car.location %></li>
-    </ul>
-  </div>
-
-  <div class="row">
-    <div class="col">
+    <div class="flex-row text-center" style="background-color: white; width: 49%">
+      <ul id="lists">
+        <li class="list"> <strong>Make:</strong> <%= @car.make %></em></li>
+        <li class="list"> <strong> Model: </strong> <%= @car.model %></li>
+        <li class="list"><strong>Price:</strong> <%= @car.price %></li>
+        <li class="list"><strong>Location</strong> <%= @car.location %></li>
+      </ul>
+    </div>
+      <div class="row">
+      <div class="col">
       <%=image_tag(@car.photo_url, class: "img-fluid") %>
     </div>
-    <div class="col">
-      <h3>Book our <%= @car.make %></h3>
+    <% else %>
+     <hr>
+  <div class="container">
+    <div class="flex-row text-center" style="background-color: white; width: 49%">
+      <ul id="lists">
+        <li class="list"> <strong>Make:</strong> <%= @car.make %></em></li>
+        <li class="list"> <strong> Model: </strong> <%= @car.model %></li>
+        <li class="list"><strong>Price:</strong> <%= @car.price %></li>
+        <li class="list"><strong>Location</strong> <%= @car.location %></li>
+      </ul>
+      </div>
+      <div class="row">
+      <div class="col">
+      <%=image_tag(@car.photo_url, class: "img-fluid") %>
+    </div>
+
+  <div class="col">
+    <h3>Book our <%= @car.make %></h3>
+
       <%= simple_form_for [@car, @booking] do |f| %>
         <%= f.input :comment %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
-        <%= f.button :submit %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
       <% end %>
     </div>
   </div>
+  <br>
+  <%= link_to "Delete",
+  car_path(@car),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
 </div>

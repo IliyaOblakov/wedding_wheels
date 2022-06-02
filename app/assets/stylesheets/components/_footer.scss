@@ -2,11 +2,11 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: rgba(115, 163, 236, 0.8);
+  background-color: rgba(209, 242, 209, 0.8);
   bottom: 0;
   padding-left: 40px;
   right: 0;
-  color: white;
+  color: rgb(9, 4, 4);
 }
 .footer-top {
   display: flex;
@@ -45,13 +45,13 @@
   margin: 20px auto;
 }
 .link-item {
-  color: #FFF;
+  color: rgb(7, 6, 6);
   font-size: .8em;
   text-decoration: none;
 }
 .link-item:hover {
   text-decoration: none;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(253, 160, 160, 0.5);
 }
 .footer-bar {
   margin: auto;
@@ -81,15 +81,15 @@
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 1em;
-  color: #FFF;
+  color: rgb(9, 7, 7);
 }
 .icon:hover {
-  color: #CDCDCD;
+  color: #ef6063;
 }
 .copywright {
   text-align: center;
   font-size: .8em;
-  color: #666;
+  color: rgb(244, 106, 106);
 }
 @media only screen and (max-width: 745px) {
   .links-section,

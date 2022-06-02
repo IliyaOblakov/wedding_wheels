@@ -1,5 +1,7 @@
 <div class="container">
 
+<br></br>
+
 <div class="search">
 <%= form_tag cars_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
@@ -10,7 +12,24 @@
   <%= submit_tag "Search", class: "btn btn-primary search-button" %>
 <% end %>
 </div>
+
 <br></br>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.instant-quote.co/images/cars/large/o_1dlvc4ush1cid1e719et1fa37tvj.jpg);">
+  <div class="container">
+    <h1><strong>Delivering you to your wedding with elegance and style on time and relaxed ❤️</strong></h1>
+  </div>
+</div>
+<div class="paragraph">
+  <div class="container">
+    <div class="text-center">
+      <h1>About Wedding Wheels</h1>
+  </div>
+  <p>At Wedding Wheels, we’re proud to be a leading luxury wedding car hire company. We offer our services throughout London so no matter your needs for wedding transport, rest assured that we have you covered.
+  Weddings are our forte, it’s what we love and what we’re passionate about. So no matter if you’re looking for a classic wedding car or a luxurious limousine, we have everything you need to make your special day that extra special! </p>
+</div>
+</div>
+
   <h1 style="text-align: center;">Cars For Hire</h1>
   <div class="cards">
     <% @cars.each do | car | %>
