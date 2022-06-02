@@ -1,16 +1,15 @@
 .navbar-lewagon {
+  display: block !important;
   justify-content: space-around;
   background: rgb(209, 242, 209);
 }
 
-.left-space {
-  flex-grow: 1;
-}
 
-.navbar-brand {
+.navbar-brand-lewagon {
+    text-decoration: none;
+    margin: 0 auto;
     font-family: $accent-font;
     font-size: 90px;
-    flex-grow: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
