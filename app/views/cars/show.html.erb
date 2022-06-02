@@ -28,8 +28,13 @@
       <div class="col">
       <%=image_tag(@car.photo_url, class: "img-fluid") %>
     </div>
+
+    <div class="col">
+      <h3>Book our <%= @car.make %></h3>
+      <br></br>
   <div class="col">
     <h3>Book our <%= @car.make %></h3>
+
       <%= simple_form_for [@car, @booking] do |f| %>
         <%= f.input :comment %>
         <%= f.input :start_date, as: :date, html5: true %>
@@ -38,5 +43,10 @@
       <% end %>
     </div>
   </div>
+  <br></br>
+  <%= link_to "Delete",
+  car_path(@car),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
 </div>
 <% end %>
