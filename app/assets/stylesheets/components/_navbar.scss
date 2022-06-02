@@ -1,6 +1,16 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  justify-content: space-around;
+  background: rgb(209, 242, 209);
+}
+
+.left-space {
+  flex-grow: 1;
+}
+
+.navbar-brand {
+    font-family: $accent-font;
+    font-size: 90px;
+    flex-grow: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +18,11 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  height: 80px;
+}
+
+h1 {
+  color: rgb(6, 3, 4);
+  font-size: 80px;
+  font-family: 'Satisfy', "cursive";
 }
