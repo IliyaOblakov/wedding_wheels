@@ -29,6 +29,7 @@
       <%=image_tag(@car.photo_url, class: "img-fluid") %>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="col">
       <h3>Book our <%= @car.make %></h3>
       <br></br>
@@ -36,11 +37,21 @@
   <div class="col">
     <h3>Book our <%= @car.make %></h3>
 >>>>>>> e8e3f3aee644bcfa35cabf7a3e3801b71111c3b2
+=======
+
+    <div class="col">
+      <h3>Book our <%= @car.make %></h3>
+      <br></br>
+  <div class="col">
+    <h3>Book our <%= @car.make %></h3>
+
+>>>>>>> 907594adbc3b645b0327ef751990669f6bfcb979
       <%= simple_form_for [@car, @booking] do |f| %>
         <%= f.input :comment %>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true %>
         <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
       <% end %>
     </div>
   </div>
@@ -50,4 +61,3 @@
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
 </div>
-<% end %>
