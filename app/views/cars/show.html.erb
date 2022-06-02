@@ -15,6 +15,7 @@
     </div>
     <div class="col">
       <h3>Book our <%= @car.make %></h3>
+      <br></br>
       <%= simple_form_for [@car, @booking] do |f| %>
         <%= f.input :comment %>
         <%= f.input :start_date %>
@@ -23,4 +24,9 @@
       <% end %>
     </div>
   </div>
+  <br></br>
+  <%= link_to "Delete",
+  car_path(@car),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
 </div>
