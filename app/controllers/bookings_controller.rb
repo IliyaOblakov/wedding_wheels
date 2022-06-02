@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.car = Car.find(params[:car_id])
       if @booking.save
-        redirect_to car_booking_path(@booking.car, @booking)
+        redirect_to my_bookings_path(@booking.car, @booking)
       else
         redirect_to car_path(:car_id), status: :unprocessable_entity
       end
@@ -17,6 +17,17 @@ class BookingsController < ApplicationController
 
   def show
     @bookings = Booking.all
+  end
+
+  def my_bookings
+    @my_bookings = Booking.where(user_id: current_user.id)
+  end
+
+  def destroy
+
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to car_bookings(car)
   end
 
   private

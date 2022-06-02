@@ -1,0 +1,4 @@
+<%@my_bookings.each do |booking| %>
+  <p> <%=booking.comment  %></p>
+  <%= image_tag(booking.car.photo_url, class: "img-fluid") %> %>
+<% end %>
