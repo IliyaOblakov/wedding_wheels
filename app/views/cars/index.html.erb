@@ -12,7 +12,21 @@
   Weddings are our forte, it’s what we love and what we’re passionate about. So no matter if you’re looking for a classic wedding car or a luxurious limousine, we have everything you need to make your special day that extra special! </p>
 </div>
 </div>
-<div class="container pt-3">
+
+<div class="container">
+
+<div class="search">
+<%= form_tag cars_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control input",
+    placeholder: "Search for Make, Model or Location"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary search-button" %>
+<% end %>
+</div>
+<br></br>
+
   <h1 style="text-align: center;">Cars For Hire</h1>
   <div class="cards">
     <% @cars.each do | car | %>
