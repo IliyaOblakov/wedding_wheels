@@ -1,6 +1,11 @@
 class CarsController < ApplicationController
   def index
-    @cars = Car.all
+      if params[:query].present?
+        sql_query = "make ILIKE :query OR model ILIKE :query OR location ILIKE :query"
+        @cars = Car.where(sql_query, query: "%#{params[:query]}%")
+      else
+        @cars = Car.all
+      end
   end
 
   def show
