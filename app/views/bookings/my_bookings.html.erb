@@ -1,0 +1,21 @@
+  <div class="container">
+      <div class="row">
+        <div class="col-ld-4 pt-4">
+          <div class ="cards">
+            <%@my_bookings.each do |booking| %>
+            <div class="card-trip">
+              <%= image_tag(booking.car.photo_url) %>
+              <div class="card-trip-infos">
+                <div>
+                  <h6> <strong>Comment</strong> <%=booking.comment  %></h6>
+                  <h6><strong>Start date: </strong><%= booking.start_date %></h6>
+                  <h6><strong>End date:</strong> <%= booking.end_date %></h6>
+                </div>
+              </div>
+            </div>
+           <% end %>
+          </div>
+       </div>
+     </div>
+   </div>
+
