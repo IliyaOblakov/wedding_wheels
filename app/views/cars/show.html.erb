@@ -1,5 +1,5 @@
 <% if current_user.present? && current_user.id == @car.user_id %>
-<div class="container">
+<div class="container mt-3">
     <div class="flex-row text-center" style="background-color: white; width: 49%">
       <ul id="lists">
         <li class="list"> <strong>Make:</strong> <%= @car.make %></em></li>
@@ -14,9 +14,16 @@
         <%=image_tag(@car.photo_url, class: "img-fluid") %>
       </div>
     </div>
+   <%= link_to "Update",
+    edit_car_path(@car)
+  %>
+     <%= link_to "Delete",
+    car_path(@car),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
   </div>
 <% else%>
-  <div class="container">
+  <div class="container mt-3">
     <div class="flex-row text-center" style="background-color: white; width: 49%">
       <ul id="lists">
         <li class="list"> <strong>Make:</strong> <%= @car.make %></em></li>
@@ -49,8 +56,4 @@
   <br>
 <div class="container">
 
-  <%= link_to "Delete",
-    car_path(@car),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
 </div>
