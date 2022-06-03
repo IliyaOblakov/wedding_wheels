@@ -1,7 +1,7 @@
 <div class="container">
 
   <div>
-    <div class="search"  data-controller="scroll-down" >
+    <div class="search mt-4"  data-controller="scroll-down" >
       <%= form_tag cars_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
           params[:query],
