@@ -8,6 +8,7 @@
   right: 0;
   color: rgb(9, 4, 4);
 }
+
 .footer-top {
   display: flex;
   width: 75%;
@@ -15,6 +16,11 @@
   padding: 10px;
   justify-content: space-around;
 }
+
+h5 {
+  text-align: center;
+}
+
 .footer-bottom {
   display: flex;
   flex-direction: column;
