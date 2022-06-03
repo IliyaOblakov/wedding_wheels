@@ -27,18 +27,22 @@
 </div>
 <br></br>
 <div class="container">
-  <h1 style="text-align: center;">Cars For Hire</h1>
-  <br></br>
-  <div class="cards">
-    <% @cars.each do | car | %>
-      <%= link_to car_path(car), style: "text-decoration: none" do %>
-        <%= render 'shared/car-card', car: car %>
-        <% end %>
-      <% end %>
-  </div>
-    <div style="width: 100%; height: 600px;"
-        data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+ <div class="row">
+   <div class="col-ld-4 pt-4">
+        <h1 style="text-align: center;">Cars For Hire</h1>
+        <br></br>
+        <div class="cards">
+          <% @cars.each do | car | %>
+            <%= link_to car_path(car), style: "text-decoration: none" do %>
+              <%= render 'shared/car-card', car: car %>
+              <% end %>
+            <% end %>
+        </div>
+          <div style="width: 100; height: 600px;"
+              data-controller="map"
+              data-map-markers-value="<%= @markers.to_json %>"
+              data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+     </div>
    </div>
 </div>
