@@ -8,7 +8,10 @@ class CarsController < ApplicationController
         @markers = @cars.geocoded.map do |car|
           {
             lat: car.latitude,
-            lng: car.longitude
+            lng: car.longitude,
+            info_window: render_to_string(partial: "info_window", locals: { car: car }),
+            # image_url: image_path("../assets/images/new_wedding_wheels_logo.png")
+            image_url: helpers.asset_url("wedding_wheels_logo.png")
           }
         end
       end
