@@ -8,11 +8,11 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.car = Car.find(params[:car_id])
-      if @booking.save
-        redirect_to my_bookings_path(@booking.car, @booking)
-      else
-        redirect_to car_path(:car_id), status: :unprocessable_entity
-      end
+    if @booking.save && current_user.present?
+      redirect_to my_bookings_path(@booking.car, @booking)
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def show
