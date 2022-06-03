@@ -1,0 +1,10 @@
+<div class="card-trip">
+  <%= image_tag(car.photo_url, size: "600x400") %>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= "#{car.make} #{car.model}" %></h2>
+      <p>Located in <%= car.location %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= car.price %></h2>
+  </div>
+</div>

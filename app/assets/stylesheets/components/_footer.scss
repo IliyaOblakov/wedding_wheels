@@ -8,6 +8,7 @@
   right: 0;
   color: rgb(9, 4, 4);
 }
+
 .footer-top {
   display: flex;
   width: 75%;
@@ -15,6 +16,11 @@
   padding: 10px;
   justify-content: space-around;
 }
+
+h5 {
+  text-align: center;
+}
+
 .footer-bottom {
   display: flex;
   flex-direction: column;
@@ -23,7 +29,7 @@
 .links-section {
   display: flex;
   width: 50%;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 30px;
 }
 .links-header {
@@ -89,7 +95,7 @@
 .copywright {
   text-align: center;
   font-size: .8em;
-  color: rgb(244, 106, 106);
+  color: rgb(246, 57, 148);
 }
 @media only screen and (max-width: 745px) {
   .links-section,
