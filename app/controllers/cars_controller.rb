@@ -5,6 +5,12 @@ class CarsController < ApplicationController
         @cars = Car.where(sql_query, query: "%#{params[:query]}%")
       else
         @cars = Car.all
+        @markers = @cars.geocoded.map do |car|
+          {
+            lat: car.latitude,
+            lng: car.longitude
+          }
+        end
       end
   end
 
