@@ -8,9 +8,5 @@ import { application } from "./application"
 import ScrollDownController from "./scroll_down_controller.js"
 application.register("scroll-down", ScrollDownController)
 
-import HelloController from "./hello_controller.js"
-application.register("hello", HelloController)
-
 import MapController from "./map_controller.js"
 application.register("map", MapController)
-
