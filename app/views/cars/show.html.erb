@@ -15,11 +15,11 @@
       </div>
     </div>
    <%= link_to "Update",
-    edit_car_path(@car)
+    edit_car_path(@car), :class => "btn button mt-3"
   %>
      <%= link_to "Delete",
     car_path(@car),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, :class => "btn button mt-3"
   %>
   </div>
 <% else%>
@@ -55,10 +55,5 @@
    </div>
 <% end %>
   <br>
-  <div class="btn button">
-  <%= link_to "Delete",
-  car_path(@car),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
   </div>
 </div>
