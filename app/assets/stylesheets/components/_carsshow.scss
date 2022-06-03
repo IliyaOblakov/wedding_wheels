@@ -18,6 +18,10 @@
     grid-gap: 16px;
   }
 
+  .car-info{
+    font-size: 20px;
+  }
+
   // Smallest device
   @media (min-width: 100px) and (max-width: 575px) {
     #showcar {
