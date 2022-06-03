@@ -1,5 +1,4 @@
 <% if current_user.present? && current_user.id == @car.user_id %>
-  <hr>
 <div class="container">
     <div class="flex-row text-center" style="background-color: white; width: 49%">
       <ul id="lists">
@@ -17,7 +16,6 @@
     </div>
   </div>
 <% else%>
-  <hr>
   <div class="container">
     <div class="flex-row text-center" style="background-color: white; width: 49%">
       <ul id="lists">
@@ -32,11 +30,11 @@
         <%=image_tag(@car.photo_url, class: "img-fluid") %>
       </div>
 
-      <div class="col">
-        <h3>Book our <%= @car.make %></h3>
+
         <br>
         <div class="col">
           <h3>Book our <%= @car.make %></h3>
+          <br>
           <%= simple_form_for [@car, @booking] do |f| %>
             <%= f.input :comment %>
             <%= f.input :start_date, as: :date, html5: true %>
