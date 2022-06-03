@@ -1,10 +1,20 @@
 .search-button {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  color: white;
+  color: black;
+  background-color: #E8C7C8;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
 }
 
 .input {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+}
+
+
+.search-button:hover {
+  background-color: #98B0D5 ;
+  border-color: #E8C7C8;
 }
