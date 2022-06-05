@@ -2,15 +2,18 @@
 
   <div>
     <div class="search mt-4"  data-controller="scroll-down" >
-      <%= form_tag cars_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control input",
-          placeholder: "Search for Make, Model or Location"
-        %>
-         <%# add this to the button to scroll down , data: { action: "click->scroll-down#scroll" } %>
-        <%= submit_tag "Search", class: "btn btn-primary search-button" %>
-      <% end %>
+     <% if current_user.present? %>
+        <h1>Hello <%=current_user.first_name%> !</h1>
+      <%end %>
+        <%= form_tag cars_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control input",
+            placeholder: "Search for Make, Model or Location"
+          %>
+          <%# add this to the button to scroll down , data: { action: "click->scroll-down#scroll" } %>
+          <%= submit_tag "Search", class: "btn btn-primary search-button" %>
+        <% end %>
     </div>
   </div>
 
