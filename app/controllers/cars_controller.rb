@@ -10,7 +10,6 @@ class CarsController < ApplicationController
             lat: car.latitude,
             lng: car.longitude,
             info_window: render_to_string(partial: "info_window", locals: { car: car }),
-            # image_url: image_path("../assets/images/new_wedding_wheels_logo.png")
             image_url: helpers.asset_url("wedding_wheels_logo.png")
           }
         end
@@ -57,5 +56,4 @@ class CarsController < ApplicationController
   def car_params
     params.require(:car).permit(:make, :model, :photo_url, :price, :location)
   end
-
 end
